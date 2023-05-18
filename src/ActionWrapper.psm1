@@ -11,6 +11,7 @@ function Invoke-Action {
         'issue_comment' { Initialize-PR }
         'schedule' { Initialize-Scheduled }
         'workflow_dispatch' { Initialize-Scheduled }
+        'published' { Initialize-Scheduled }
         'issues' { Initialize-Issue }
         default { Write-Log 'Not supported event type' }
     }
