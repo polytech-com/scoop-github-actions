@@ -7,11 +7,12 @@ function Initialize-Scheduled {
     #>
     Write-Log 'Scheduled initialized'
 
-    if ($env:GITHUB_REF_NAME) {
-        $_BRANCH = $env:GITHUB_REF_NAME
-    } else {
-        $_BRANCH = 'master'
-    }
+    # if ($env:GITHUB_REF_NAME) {
+    #     $_BRANCH = $env:GITHUB_REF_NAME
+    # } else {
+    #     $_BRANCH = 'master'
+    # }
+    $_BRANCH = 'main'
 
     $params = @{
         'Dir'          = $MANIFESTS_LOCATION
